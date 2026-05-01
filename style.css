@@ -16,15 +16,15 @@
     --text-dim: #52525b;
 
     /* Accent (customizable) */
-    --accent: #ffffff;
-    --accent-dim: rgba(255, 255, 255, 0.8);
-    --accent-glow: rgba(255, 255, 255, 0.1);
+    --accent: #60a5fa;
+    --accent-dim: rgba(96, 165, 250, 0.8);
+    --accent-glow: rgba(59, 130, 246, 0.2);
 
-    /* Status colors */
+    /* Status colors - cosmic theme */
     --success: #22c55e;
-    --warning: #f59e0b;
-    --error: #ef4444;
-    --info: #3b82f6;
+    --warning: #fbbf24;
+    --error: #f87171;
+    --info: #60a5fa;
 
     /* Shadows */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -66,6 +66,12 @@
 
     /* Background (customizable) */
     --bg-image: url('background.png');
+    
+    /* Cosmic color scheme */
+    --cosmic-blue: #3b82f6;
+    --cosmic-purple: #8b5cf6;
+    --cosmic-cyan: #06b6d4;
+    --cosmic-glow: rgba(59, 130, 246, 0.3);
 }
 
 *,
@@ -89,6 +95,13 @@ html,
     overflow: hidden;
     color: var(--text);
     position: relative;
+    animation: backgroundMove 30s linear infinite;
+}
+
+@keyframes backgroundMove {
+    0% { background-position: center 0%; }
+    50% { background-position: center 100%; }
+    100% { background-position: center 0%; }
 }
 
 body::before,
@@ -132,15 +145,20 @@ html::before,
         radial-gradient(1px 1px at 60% 12%, rgba(255,255,255,0.7), transparent),
         radial-gradient(2px 2px at 75% 20%, rgba(255,255,255,0.8), transparent),
         radial-gradient(3px 3px at 90% 25%, rgba(255,255,255,0.6), transparent);
-    background-size: 200% 200%;
-    animation: twinkle 10s ease-in-out infinite;
+    background-size: 300% 300%;
+    animation: twinkle 8s ease-in-out infinite, starMove 20s linear infinite;
     pointer-events: none;
     z-index: 1;
 }
 
 @keyframes twinkle {
-    0%, 100% { opacity: 0.8; }
-    50% { opacity: 0.3; }
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 0.4; }
+}
+
+@keyframes starMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
 }
 
 /* Layout */
