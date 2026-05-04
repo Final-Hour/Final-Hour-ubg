@@ -1,11 +1,11 @@
 // =====================================================
 // CONFIGURATION - Gets from config.js
 // =====================================================
-const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss://dildorider38.misem.or.id/wisp/wisp/";
+const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss://wisp.mercurywork.shop/";
 const WISP_SERVERS = [
-    { name: "DildoRider38", url: "wss://dildorider38.misem.or.id/wisp/wisp/" },
-    { name: "JichaelMordan", url: "wss://jichaelmordan.chickenkiller.com/wisp/" },
-    { name: "MercuryWorkshop", url: "wss://wisp.mercurywork.shop/" }
+    { name: "MercuryWorkshop", url: "wss://wisp.mercurywork.shop/" },
+    { name: "Celestial", url: "wss://wisp.celestial.sh/" },
+    { name: "Gams", url: "wss://wisp.gams.lol/" }
 ];
 
 // Initialize default proxy server if not set
