@@ -5,7 +5,8 @@ const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss://wisp.mercurywork.
 const WISP_SERVERS = [
     { name: "MercuryWorkshop", url: "wss://wisp.mercurywork.shop/" },
     { name: "Celestial", url: "wss://wisp.celestial.sh/" },
-    { name: "Gams", url: "wss://wisp.gams.lol/" }
+    { name: "Nebula", url: "wss://nebula.wisp.sh/" },
+    { name: "Asteroid", url: "wss://wisp.asteroid.how/" }
 ];
 
 // Initialize default proxy server if not set
